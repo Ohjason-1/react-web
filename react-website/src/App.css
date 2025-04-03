@@ -1,0 +1,182 @@
+/* Main container */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Header styles */
+.header {
+  background-color: #fad1d1; /* Soft pink background */
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Nav container */
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Search container */
+.search-container {
+  flex: 1;
+  margin: 0 16px;
+  position: relative;
+}
+
+.search-bar {
+  background-color: #fce7e7; /* Lighter pink for search bar */
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  width: 100%;
+}
+
+.search-bar input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 0 8px;
+}
+
+/* Profile section */
+.profile-section {
+  display: flex;
+  align-items: center;
+}
+
+.plus-button {
+  background-color: #f0f0f0;
+  border-radius: 9999px;
+  padding: 4px;
+  margin-right: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.profile-icon {
+  background-color: #ec8c4f; /* Orange background for profile */
+  border-radius: 9999px;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 9999px;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 16px;
+  background-color: white;
+  overflow-y: auto;
+}
+
+/* Home page */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.home-image {
+  border: 2px solid #3b82f6; /* Blue border */
+  border-radius: 8px;
+  overflow: hidden;
+  height: 300px;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+}
+
+.home-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Fruit info page */
+.fruit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.fruit-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.fruit-image {
+  height: 150px;
+  overflow: hidden;
+}
+
+.fruit-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fruit-details {
+  padding: 15px;
+}
+
+.fruit-details h3 {
+  margin-top: 0;
+  color: #6b4e94;
+}
+
+.fruit-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 15px 15px;
+}
+
+/* Saved fruits page */
+.saved-fruits {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.no-saved-fruits {
+  text-align: center;
+  padding: 40px;
+  color: #777;
+}
+
+/* Loading and error states */
+.loading, .error {
+  text-align: center;
+  padding: 40px;
+  color: #777;
+}
+
+.error {
+  color: #e74c3c;
+}
