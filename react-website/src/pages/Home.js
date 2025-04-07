@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <div className="home-container">
-      <h1>Welcome to Fruitopia</h1>
+      <h1>Welcome</h1>
       <p>Discover nutritional information about your favorite fruits</p>
       
       <div className="home-image">

@@ -8,22 +8,16 @@ const SavedFruits = () => {
   const [error, setError] = useState(null);
   
   useEffect(() => {
-    // Function to fetch fruit data from the Fruityvice API
+    // Function to fetch fruit data from our proxy server
     const fetchFruitData = async () => {
       try {
         setLoading(true);
         
-        // Using the Fruityvice public API - this fulfills the Axios HTTPS API requirement
-        const response = await axios.get('https://www.fruityvice.com/api/fruit/all');
+        // Use our local proxy server instead of directly calling Fruityvice API
+        const response = await axios.get('http://localhost:5001/api/fruits');
         
-        // Add image URLs to the fruits (since this API doesn't provide images)
-        const fruitsWithImages = response.data.slice(0, 5).map(fruit => ({
-          ...fruit,
-          image: `https://source.unsplash.com/200x150/?${fruit.name.toLowerCase()}`,
-          id: fruit.id
-        }));
-        
-        setFruits(fruitsWithImages);
+        // No need to map images as our proxy already adds them
+        setFruits(response.data.slice(0, 5));
         setLoading(false);
       } catch (err) {
         console.error('Error fetching fruit data:', err);

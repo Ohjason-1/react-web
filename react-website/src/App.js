@@ -10,15 +10,7 @@ function App() {
   const [savedFruits, setSavedFruits] = useState([]);
   const location = useLocation();
   
-  // Function to save a fruit to favorites
-  const saveFruit = (fruit) => {
-    if (!savedFruits.some(item => item.id === fruit.id)) {
-      setSavedFruits([...savedFruits, fruit]);
-      alert(`${fruit.name} added to favorites!`);
-    } else {
-      alert(`${fruit.name} is already in your favorites!`);
-    }
-  };
+  
   
   // Function to remove a fruit from favorites
   const removeFruit = (fruitId) => {
@@ -55,7 +47,7 @@ function App() {
             <i className="fas fa-plus"></i>
           </div>
           <div className="profile-icon">
-            <img src="https://via.placeholder.com/40" alt="Profile" />
+            <img src="/me.png" alt="Profile" />
           </div>
         </div>
       </header>
